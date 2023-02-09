@@ -1,0 +1,17 @@
+.container{
+    width: 90%;
+    max-width: 1600px;
+}
+
+.container-welcome{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+}
+
+.form{
+    max-width: 600px;
+    margin: auto;
+}
