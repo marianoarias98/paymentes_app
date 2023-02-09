@@ -9,8 +9,6 @@
 
     $contacts = $conn->prepare("SELECT * from userscontacts where iduser = :iduser");
     $contacts->execute([":iduser" => $_SESSION["user"]["id"]]);
-
-    // $contacts = $statement->fetch(PDO::FETCH_ASSOC);
 ?>
 <?php include "static/head.php"?>
 <?php include "static/navbar.php"?>
@@ -26,7 +24,11 @@
     </section>
     <section class="cards-container container">
         <?php foreach($contacts as $contact){?>
-            <div class="card"><?= $contact["name"] . "<br>" . $contact["idcontacto"]?></div>
+            <div class="card">
+                <h3 class="contact name"><?= $contact["name"]?></h3>
+                <h4><?=$contact["idcontacto"]?></h4>
+                <a type="submit" class="button is-danger" href="delete_contact.php?idcontacto=<?= $contact["idcontacto"]?>">Delete</a>
+            </div>
         <?php }?>
     </section>
 <?php include "static/footer.php"?>
