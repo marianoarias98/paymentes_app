@@ -12,7 +12,7 @@
   <div id="navbarBasicExample" class="navbar-menu">
     <?php if(isset($_SESSION["user"])){?>
     <div class="navbar-start">
-      <a class="navbar-item">
+      <a class="navbar-item" href="/home.php">
         Home
       </a>
       <div class="navbar-item has-dropdown is-hoverable">

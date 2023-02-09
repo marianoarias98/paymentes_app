@@ -9,7 +9,6 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST"){
         $name = $_POST["name"];
         $email = $_POST["email"];
-        $password = $_POST["password"];
         if(!empty($email) && !empty($password)){
           $statement = $conn->prepare("SELECT * from users where email = :email LIMIT 1");
           $statement->execute([
@@ -18,10 +17,10 @@
           
           $contact = $statement->fetch(PDO::FETCH_ASSOC);
           if($statement->rowCount()!=0){
-            $statement = $conn->prepare("INSERT INTO userscontacts (iduser,idcontacto, name) values (:iduser, , :idcontacto, :name)");
+            $statement = $conn->prepare("INSERT INTO userscontacts values (:iduser, :idcontacto, :name)");
             $statement->execute([
             ":iduser" => $_SESSION["user"]["id"],
-            ":idcontact" => $contact["id"],
+            ":idcontacto" => $contact["id"],
             ":name" => $name
           ]);
           header("Location: /home.php");
@@ -32,7 +31,7 @@
 <?php include "static/head.php"?>
 <?php include "static/navbar.php"?>
 <div class="container">
-    <form action="add_contact" class="form" method="POST">
+    <form action="add_contact.php" class="form" method="POST">
         <hi class="title">Create Contact</hi><br><br>
     <div class="field">
         <p class="control has-icons-left has-icons-right">
