@@ -28,3 +28,8 @@
     border-radius: 10px;
     background-color: rgb(240, 240, 240);
 }
+
+.record{
+    display: grid;
+    gap: 20px;
+}

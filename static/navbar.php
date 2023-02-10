@@ -23,7 +23,7 @@
           <a class="navbar-item" href="/add_transfer.php">
             Send
           </a>
-          <a class="navbar-item">
+          <a class="navbar-item" href="record.php">
             Record
           </a>
         </div>
