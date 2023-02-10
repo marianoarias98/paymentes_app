@@ -37,6 +37,7 @@
         </div>
     </section>
     <section class="container">
+    <h2 class="title">Transfers Record</h2>
         <div class="cards-container">
             <?php foreach($transfers as $transfer){?>
                 <div class="card">
@@ -45,8 +46,11 @@
                 </div>
             <?php }?>
         </div>
+        <a href="record.php" class="button is-success">See More</a>
     </section>
     <section class="container">
+        <h1 class="title">Payments</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor adipisci provident fugiat quasi!</p>
         <div class="cards-container">
             <div class="card">img</div>
         </div>
