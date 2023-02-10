@@ -20,7 +20,7 @@
           Transfers
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item">
+          <a class="navbar-item" href="/add_transfer.php">
             Send
           </a>
           <a class="navbar-item">
@@ -39,9 +39,6 @@
           </a>
           <a class="navbar-item">
             Edit Contact
-          </a>
-          <a class="navbar-item">
-            Delete contact
           </a>
         </div>
       </div>

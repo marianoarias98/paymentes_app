@@ -1,6 +1,7 @@
 .container{
     width: 90%;
     max-width: 1600px;
+    padding: 30px;
 }
 
 .container-welcome{
