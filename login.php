@@ -13,7 +13,7 @@
             $user = $statement->fetch(PDO::FETCH_ASSOC);
             $_SESSION["user"] = $user;
     
-            if (password_verify($password, $user["password"]))
+            if (password_verify($password, $_SESSION["user"]["password"]))
               session_start();
               unset($user["password"]);
               $_SESSION["user"] = $user;

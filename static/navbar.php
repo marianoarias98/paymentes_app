@@ -37,9 +37,6 @@
           <a class="navbar-item" href="add_contact.php">
             Create Contact
           </a>
-          <a class="navbar-item">
-            Edit Contact
-          </a>
         </div>
       </div>
       <a class="navbar-item red">
