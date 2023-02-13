@@ -6,11 +6,14 @@
 		return;
 	}
 
+	//contacts administration
 	$contacts = $conn->prepare("SELECT * from userscontacts where iduser = :iduser");
 	$contacts->execute([":iduser" => $_SESSION["user"]["id"]]);
 
+	//transfers administration
 	$transfers = $conn->prepare("SELECT * from transfers where idusersend = :iduser or iduserrecib = :iduser");
 	$transfers->execute([":iduser" => $_SESSION["user"]["id"]]);
+
 ?>
 <?php include "static/head.php"?>
 <?php include "static/navbar.php"?>
@@ -48,13 +51,6 @@
 			<?php }?>
 		</div>
 		<a href="record.php" class="button is-success">See More</a>
-	</section>
-	<section class="container">
-		<h1 class="title">Payments</h1>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor adipisci provident fugiat quasi!</p>
-		<div class="cards-container">
-			<div class="card">img</div>
-		</div>
 	</section>
 
 <?php include "static/footer.php"?>
